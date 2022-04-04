@@ -23,4 +23,20 @@ context('Using Async Commands', () => {
         });
     });
   });
+  it('does not work as we expect', () => {
+    cy.visit('/my/resource/path') 
+  
+    cy.get('.awesome-selector') 
+      .click() // 
+      .then(() => {
+       
+        let el = Cypress.$('.new-el')
+  
+        if (el.length) {
+          cy.get('.another-selector')
+        } else {
+          cy.get('.optional-selector')
+        }
+      })
+  })
 });
