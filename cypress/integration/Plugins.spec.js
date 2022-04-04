@@ -3,7 +3,7 @@
 
 const navbarText= Cypress.env("navbarText")
  
-context("Targetting Elements using Cypress",()=>{
+context("Using React Testing Library and Plugins",()=>{
     beforeEach(()=>{
         cy.visit('/')
     })
